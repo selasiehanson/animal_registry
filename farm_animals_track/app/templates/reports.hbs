@@ -1,0 +1,32 @@
+<h2 class="clearfix">
+Reports
+</h2>
+{{ outlet }}
+
+<div class="panel panel-custom">
+  <div class="panel-heading heading-title">Breeds</div>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th class='grid-action-1'>#</th>
+        <th>Animal</th>
+        <th class='grid-action-2'></th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each}}
+      <tr>
+        <td>{{plusone _view.contentIndex }}</td>
+        <td>
+          {{#link-to 'reports.show' this}}
+            {{name }}
+          {{/link-to}}
+        </td>
+        <td>
+          <a> <span  class="glyphicon glyphicon-pencil"></span></a>
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,30 @@
+<div class="panel panel-custom">
+  <div class="panel-heading heading-title">
+    {{ currentAction }}
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="form-group col-md-3 col-sm-3">
+        <label>Animal</label>
+        {{ 
+            view Ember.Select
+            contentBinding=animals
+            class="form-control"
+            valueBinding='selectedAnimal'
+            selectionBinding='defaultAnimal'
+            optionValuePath='content.id'
+            optionLabelPath='content.name'
+            prompt="Select An Animal"
+        }}
+    </div>
+    <div class="form-group col-md-3 col-sm-3">
+      <label>Name </label>
+      {{ input type="text" class="form-control" value=name}}
+    </div>
+  </div>
+</div>
+<div class="panel-footer">
+  <a class='btn btn-success' {{ action 'create' }}> Save </a>
+  <a href="/breeds" class='btn btn-default'> Cancel </a>
+</div>
+</div>

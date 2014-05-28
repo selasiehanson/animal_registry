@@ -1,0 +1,21 @@
+<div class="panel panel-custom">
+  <div class="panel-heading heading-title clearfix">
+    <div class="pull-left">Breed - {{ id }} </div>
+    <div class="pull-right">
+      {{#link-to 'events.edit' this class='btn btn-default btn-xs'}}
+        Edit <span class="glyphicon glyphicon-pencil"></span>
+      {{/link-to}}      
+    </div>
+  </div>
+  <div class="panel-body">
+    <div>
+      Name: {{name}}
+    </div>
+    <div>
+      Count: {{count}}
+    </div>
+    <div>
+      Date: {{date}}
+    </div>
+  </div>
+</div>

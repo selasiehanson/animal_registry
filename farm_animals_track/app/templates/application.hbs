@@ -1,0 +1,18 @@
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Animal Registry - Births & Deaths</a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        {{#link-to 'events' tagName="li"}}  <a> Events  </a> {{/link-to}}
+        {{#link-to 'breeds' tagName="li"}}  <a> Breeds  </a> {{/link-to}}
+        {{#link-to 'animals' tagName="li"}} <a> Animals </a> {{/link-to}}
+        {{#link-to 'reports' tagName="li"}} <a> Reports </a> {{/link-to}}
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="container my-content">
+  {{ outlet }}
+</div>

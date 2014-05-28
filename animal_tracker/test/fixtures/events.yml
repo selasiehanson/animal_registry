@@ -1,0 +1,26 @@
+# == Schema Information
+#
+# Table name: events
+#
+#  id         :integer          not null, primary key
+#  count      :integer
+#  type       :string(255)
+#  date       :datetime
+#  breed      :integer
+#  created_at :datetime
+#  updated_at :datetime
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  count: 1
+  type: 
+  date: 2014-05-16 15:47:17
+  breed: 1
+
+two:
+  count: 1
+  type: 
+  date: 2014-05-16 15:47:17
+  breed: 1

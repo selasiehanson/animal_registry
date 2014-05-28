@@ -1,0 +1,33 @@
+<h2 class="clearfix">
+  {{link-to 'New Animal' 'animals.new' class='btn btn-primary pull-right'}}
+</h2>
+{{ outlet }}
+<div class="panel panel-custom">
+  <div class="panel-heading heading-title">Animals</div>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th class='grid-action-1'>#</th>
+        <th>Animal</th>
+        <th class='grid-action-2'></th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each}}
+      <tr>
+        <td>{{plusone _view.contentIndex }}</td>       
+        <td>
+          {{#link-to 'animals.show' this}}
+            {{name }}
+          {{/link-to}}
+        </td>
+        <td>
+          {{#link-to 'animals.edit' this }}
+            <span  class="glyphicon glyphicon-pencil"></span>
+          {{/link-to}}
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
